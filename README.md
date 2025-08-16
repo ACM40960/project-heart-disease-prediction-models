@@ -45,3 +45,24 @@ The UCI Heart dataset is sourced from Cleveland, Hungary, Switzerland, and VA Lo
 - num: Target variable
   - Value 0: no heart disease
   - Value 1, 2, 3, 4: presence of heart disease with increasing severity
+
+## Exploratory Data Analysis
+
+
+## Pre Processing Steps 
+
+## Machine Learning Models Used
+
+- Logistic Regression: This method models the log odds of an event as a linear combination of the predictor variables. It is used for binary classification problems.
+
+- Gradient Boosting: This method combines multiple weak models (mostly decision trees) to create a strong predictive model.  Here each learning tree learns from the preceding tree. The negative gradient of the loss function in each iteration is used to fit the new tree.  This moves the model’s prediction in the direction of lower loss.  (Each model is like a boost)
+
+- Random Forest Classifier: This method combines individual decision trees that are trained on different random subsets of the training data. The predictions from each of these trees are independent of each other. The final decision is the majority prediction.
+
+- XgBoost Classifier: This stands for Extreme Gradient Boosting. It makes a simple prediction on the training data, calculates the residuals and builds a decision tree. 
+
+- Support Vector Machine: This method works by finding a hyperplane that optimizes the separation between classes based on the variables. 
+
+- Naive Base Classifier: This method is used for text based classification. ‘Naive’ is used as it assumes that all features are independent, and Bayes refers to the use of Bayes’ Theorem that uses probability to predict the class of the target variable.
+
+
