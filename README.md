@@ -1,5 +1,7 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/GhwTNp6x)
 # Comparative Study of Heart Disease Prediction Models
+<img width="872" height="473" alt="image" src="https://github.com/user-attachments/assets/0d4bb3a6-65ec-4018-ac2d-b66cfd6dbfe2" />
+
 ## Overview
 This project aims to focuses on studying different machine learning models to predict heart diseases. A comprehensive evaluation is conducted using a range of performance metrics, including accuracy, precision, recall, area under the receiver operating characteristic curve (AUROC), and area under the precision-recall curve (AUPRC). By analyzing these metrics, the research aims to provide an in-depth comparison of model effectiveness, robustness, and potential clinical applicability in heart disease prediction.
 
@@ -89,8 +91,6 @@ The UCI Heart dataset is sourced from Cleveland, Hungary, Switzerland, and VA Lo
 ## Machine Learning Models Used
 
 - Logistic Regression: This method models the log odds of an event as a linear combination of the predictor variables. It is used for binary classification problems.
-
-- Gradient Boosting: This method combines multiple weak models (mostly decision trees) to create a strong predictive model.  Here each learning tree learns from the preceding tree. The negative gradient of the loss function in each iteration is used to fit the new tree.  This moves the model’s prediction in the direction of lower loss.  (Each model is like a boost)
 
 - Random Forest Classifier: This method combines individual decision trees that are trained on different random subsets of the training data. The predictions from each of these trees are independent of each other. The final decision is the majority prediction.
 
