@@ -1,5 +1,7 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/GhwTNp6x)
 # Comparative Study of Heart Disease Prediction Models
+<img width="698" height="378" alt="image" src="https://github.com/user-attachments/assets/0d4bb3a6-65ec-4018-ac2d-b66cfd6dbfe2" />
+
 ## Overview
 This project aims to focuses on studying different machine learning models to predict heart diseases. A comprehensive evaluation is conducted using a range of performance metrics, including accuracy, precision, recall, area under the receiver operating characteristic curve (AUROC), and area under the precision-recall curve (AUPRC). By analyzing these metrics, the research aims to provide an in-depth comparison of model effectiveness, robustness, and potential clinical applicability in heart disease prediction.
 
@@ -47,15 +49,48 @@ The UCI Heart dataset is sourced from Cleveland, Hungary, Switzerland, and VA Lo
   - Value 1, 2, 3, 4: presence of heart disease with increasing severity
 
 ## Exploratory Data Analysis
-
+- The distribution of target variable is given below:
+  <img width="576" height="432" alt="01_Target_Distribution" src="https://github.com/user-attachments/assets/da9874ee-5643-491e-85f6-6f49af4d8301" />
+- Correlation matrix between the variables
+  <img width="1584" height="1296" alt="02_Correlation_Matrix" src="https://github.com/user-attachments/assets/d37e366b-ba0c-4ea7-8be6-78816326876d" />
+  - A strong correlation can be seen between the number of major vessels and age
+- Age Distribution by Age
+  <img width="864" height="504" alt="03_Age_Distribution_by_Target" src="https://github.com/user-attachments/assets/d40450ca-08cf-427d-802a-f8cfca56e510" />
+  - It can be seen that there are more patients between the ages 50 and 60 in this data.
 
 ## Pre Processing Steps 
+<img width="194" height="179" alt="image" src="https://github.com/user-attachments/assets/bbba66dc-eff9-4d18-af04-ecaad489b178" />
+
+1. **Rename Columns**  
+   - The `num` column was renamed to **`target`** for clarity.  
+
+2. **Binarize Target Variable**  
+   - Converted the original target values (`0–4`) into a binary classification:  
+     - `0` → No disease  
+     - `1` → Disease present  
+
+3. **Drop Non-Predictive Columns**  
+   - Removed `id` and `dataset` columns as they carry no predictive power.  
+
+4. **Encode Categorical Columns for Imputation**  
+   - Converted categorical text columns into numeric codes temporarily.  
+
+5. **Handle Missing Values with Iterative Imputer**  
+   - Used **IterativeImputer** (10 iterations, random state 42).  
+   - Each missing value is modeled as a function of the other features.  
+
+6. **Restore Categorical Features**  
+   - After imputation, categorical codes were mapped back to their original categories.  
+
+7. **One-Hot Encoding**  
+   - Converted categorical variables into dummy variables.  
+   - Used `drop_first=True` to avoid multicollinearity.  
+
+---  
 
 ## Machine Learning Models Used
 
 - Logistic Regression: This method models the log odds of an event as a linear combination of the predictor variables. It is used for binary classification problems.
-
-- Gradient Boosting: This method combines multiple weak models (mostly decision trees) to create a strong predictive model.  Here each learning tree learns from the preceding tree. The negative gradient of the loss function in each iteration is used to fit the new tree.  This moves the model’s prediction in the direction of lower loss.  (Each model is like a boost)
 
 - Random Forest Classifier: This method combines individual decision trees that are trained on different random subsets of the training data. The predictions from each of these trees are independent of each other. The final decision is the majority prediction.
 
