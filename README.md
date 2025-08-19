@@ -60,7 +60,7 @@ The UCI Heart dataset is sourced from Cleveland, Hungary, Switzerland, and VA Lo
   - It can be seen that there are more patients between the ages 50 and 60 in this data.
 
 ## Pre Processing Steps 
-<div align="center"><img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/bbba66dc-eff9-4d18-af04-ecaad489b178" /></div>div>
+<div align="center"><img width="400" height="500" alt="image" src="https://github.com/user-attachments/assets/bbba66dc-eff9-4d18-af04-ecaad489b178" /></div>div>
 
 1. **Rename Columns**  
    - The `num` column was renamed to **`target`** for clarity.  
