@@ -55,7 +55,7 @@ The UCI Heart dataset is sourced from Cleveland, Hungary, Switzerland, and VA Lo
 - Correlation matrix between the variables
   <img width="1584" height="1296" alt="02_Correlation_Matrix" src="https://github.com/user-attachments/assets/d37e366b-ba0c-4ea7-8be6-78816326876d" />
   - A strong correlation can be seen between the number of major vessels and age
-- Age Distribution by Age
+- Age Distribution by Heart Disease Status
   <img width="864" height="504" alt="03_Age_Distribution_by_Target" src="https://github.com/user-attachments/assets/d40450ca-08cf-427d-802a-f8cfca56e510" />
   - It can be seen that there are more patients between the ages 50 and 60 in this data.
 
