@@ -1,9 +1,7 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/GhwTNp6x)
 # Comparative Study of Heart Disease Prediction Models
-.image-container {
-  text-align: center;
-}
-<div class="image-container"><img width="600" height="300" alt="image" src="https://github.com/user-attachments/assets/0d4bb3a6-65ec-4018-ac2d-b66cfd6dbfe2" /></div>
+
+<img width="700" height="400" alt="image" src="https://github.com/user-attachments/assets/0d4bb3a6-65ec-4018-ac2d-b66cfd6dbfe2" />
 
 ## Overview
 This project aims to focuses on studying different machine learning models to predict heart diseases. A comprehensive evaluation is conducted using a range of performance metrics, including accuracy, precision, recall, area under the receiver operating characteristic curve (AUROC), and area under the precision-recall curve (AUPRC). By analyzing these metrics, the research aims to provide an in-depth comparison of model effectiveness, robustness, and potential clinical applicability in heart disease prediction.
