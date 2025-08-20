@@ -60,7 +60,7 @@ The UCI Heart dataset is sourced from Cleveland, Hungary, Switzerland, and VA Lo
   - It can be seen that there are more patients between the ages 50 and 60 in this data.
 
 ## Pre Processing Steps 
-<div align="center"><img width="400" height="500" alt="image" src="https://github.com/user-attachments/assets/bbba66dc-eff9-4d18-af04-ecaad489b178" /></div>div>
+<div align="center"><img width="400" height="500" alt="image" src="https://github.com/user-attachments/assets/bbba66dc-eff9-4d18-af04-ecaad489b178" /></div>
 
 1. **Rename Columns**  
    - The `num` column was renamed to **`target`** for clarity.  
@@ -77,6 +77,7 @@ The UCI Heart dataset is sourced from Cleveland, Hungary, Switzerland, and VA Lo
    - Converted categorical text columns into numeric codes temporarily.  
 
 5. **Handle Missing Values with Iterative Imputer**
+   
    <img width="239" height="228" alt="image" src="https://github.com/user-attachments/assets/4b22448b-ba95-48cf-a4e2-0db781af2c81" />
 
    - Used **IterativeImputer** (10 iterations, random state 42).  
@@ -105,7 +106,7 @@ The UCI Heart dataset is sourced from Cleveland, Hungary, Switzerland, and VA Lo
 
 - Autoencoder + DenseNet:
   - Autoencoder: It is a neural network used for unsupervised learning to compress data and then reconstruct it. It consists of an encoder (compresses the number of features), latent space(space capturing the essential features) and a decoder (reconstructing the input code back to the orginal).  It is used for dimensionality reduction, noise reduction, feature extraction, and image reconstruction.
-  - DenseNet: It is a convolutional neural network where each layer is connected to every preceding layer directly. 8
+  - DenseNet: It is a convolutional neural network where each layer is connected to every preceding layer directly. 
 
 ## Model Training and Individual Evaluation
 The main steps are highlighted below:
@@ -117,7 +118,7 @@ The main steps are highlighted below:
     "Naive Bayes": GaussianNB(),
     "Random Forest": RandomForestClassifier(random_state=42),
     "XGBoost": XGBClassifier(random_state=42, use_label_encoder=False, eval_metric='logloss') # XGBoost with common settings to avoid warnings.
-}
+   }
   ```
 2. Each model gets a search space of hyperparameters for GridSearchCV. Naive Bayes does not have any tunable parameters here.
    ```python
@@ -127,13 +128,53 @@ The main steps are highlighted below:
     "Naive Bayes": {},
     "Random Forest": {'n_estimators': [50, 100, 200], 'max_depth': [None, 10, 20]},
     "XGBoost": {'n_estimators': [50, 100, 200], 'max_depth': [3, 5], 'learning_rate': [0.1, 0.05]}
-}
-```
+   }
+    ```
 3. For each model, a grid search with a 5-fold cross validation is run on the training data, the best hyperparameters are identified and the best model is stored.
    ```python
    for name, model in models.items():
     grid_search = GridSearchCV(model, param_grids.get(name, {}), cv=5, scoring='accuracy')
     grid_search.fit(X_train_scaled, y_train)
-```
+   ```
+4. Autoencoder + DenseNet block
+   This was the state of the art model. \\
+   Autoencoder: It compresses into 8 features (bottleneck) and is trained to reconstruct the input. After proper training, the decoder is discarded and the encoder is used to get the new compressed features.
+   ```python
+   def create_autoencoder():
+    input_layer = Input(shape=(input_dim,))
+    encoder = Dense(16, activation='relu')(input_layer)
+    encoder = Dense(8, activation='relu')(encoder)   # bottleneck
+    decoder = Dense(16, activation='relu')(encoder)
+    decoder = Dense(input_dim, activation='sigmoid')(decoder)
+    autoencoder = Model(inputs=input_layer, outputs=decoder)
+    autoencoder.compile(optimizer='adam', loss='mse')
+    encoder_model = Model(inputs=input_layer, outputs=encoder)
+    return autoencoder, encoder_model
+   ```
+   DenseNet: A small feedforward neural network is constructed. The input is the size of the encoded features. The output is a single probability. 
+   ```python
+   def create_dense_net(dense_input_dim):
+    model = Sequential([
+        Dense(32, activation='relu', input_shape=(dense_input_dim,)),
+        Dropout(0.2),
+        Dense(16, activation='relu'),
+        Dense(1, activation='sigmoid')
+    ])
+    model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+    return model
+   ```
+
+   The autoencoder is trained to compress and reconstruct the training data. The orginal data is transformed into encoded representations.
+
+## Results
+1. Confusion Matrix
+   Confusion matrix gives a detailed breakdown of the model perfomance. The confusion matrix obtained for each of the models is given below.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/da0d1d5a-8220-4057-93a0-deba12704667" width="30%" />
+  <img src="https://github.com/user-attachments/assets/0f38d7ee-35cb-40c1-bc2a-d89ec5d10d1e" width="30%" />
+  <img src="https://github.com/user-attachments/assets/36f1f315-bcf7-4d54-9534-525ff9043dbc" width="30%" />
+</p>
+
+
    
     
