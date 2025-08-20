@@ -10,7 +10,7 @@ This project aims to focuses on studying different machine learning models to pr
 The objectives of this project are:  
 - To preprocess and clean the dataset, ensuring data quality and consistency for accurate analysis.
 - To implement different machine learning models for predictive analysis.
-- To identify the best model and try to increase the performance metrics.
+- To identify the best model and with the best performance metrics.
 
 ## Libraries Used
 
