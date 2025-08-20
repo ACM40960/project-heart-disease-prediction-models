@@ -76,14 +76,16 @@ The UCI Heart dataset is sourced from Cleveland, Hungary, Switzerland, and VA Lo
 4. **Encode Categorical Columns for Imputation**  
    - Converted categorical text columns into numeric codes temporarily.  
 
-5. **Handle Missing Values with Iterative Imputer**  
+5. **Handle Missing Values with Iterative Imputer**
+   <img width="239" height="228" alt="image" src="https://github.com/user-attachments/assets/4b22448b-ba95-48cf-a4e2-0db781af2c81" />
+
    - Used **IterativeImputer** (10 iterations, random state 42).  
    - Each missing value is modeled as a function of the other features.  
 
-6. **Restore Categorical Features**  
+7. **Restore Categorical Features**  
    - After imputation, categorical codes were mapped back to their original categories.  
 
-7. **One-Hot Encoding**  
+8. **One-Hot Encoding**  
    - Converted categorical variables into dummy variables.  
    - Used `drop_first=True` to avoid multicollinearity.  
 
@@ -101,4 +103,37 @@ The UCI Heart dataset is sourced from Cleveland, Hungary, Switzerland, and VA Lo
 
 - Naive Base Classifier: This method is used for text based classification. ‘Naive’ is used as it assumes that all features are independent, and Bayes refers to the use of Bayes’ Theorem that uses probability to predict the class of the target variable.
 
+- Autoencoder + DenseNet:
+  - Autoencoder: It is a neural network used for unsupervised learning to compress data and then reconstruct it. It consists of an encoder (compresses the number of features), latent space(space capturing the essential features) and a decoder (reconstructing the input code back to the orginal).  It is used for dimensionality reduction, noise reduction, feature extraction, and image reconstruction.
+  - DenseNet: It is a convolutional neural network where each layer is connected to every preceding layer directly. 8
 
+## Model Training and Individual Evaluation
+The main steps are highlighted below:
+1. A dictionary for different classifiers has been made
+  ```python
+  models = {
+    "Logistic Regression": LogisticRegression(),
+    "Support Vector Machine": SVC(probability=True, random_state=42), # `probability=True` is needed for ROC curves.
+    "Naive Bayes": GaussianNB(),
+    "Random Forest": RandomForestClassifier(random_state=42),
+    "XGBoost": XGBClassifier(random_state=42, use_label_encoder=False, eval_metric='logloss') # XGBoost with common settings to avoid warnings.
+}
+  ```
+2. Each model gets a search space of hyperparameters for GridSearchCV. Naive Bayes does not have any tunable parameters here.
+   ```python
+   param_grids = {
+    "Logistic Regression": {'C': [0.1, 1, 10], 'solver': ['liblinear']},
+    "Support Vector Machine": {'C': [0.1, 1, 10], 'gamma': [1, 0.1, 0.01], 'kernel': ['rbf']},
+    "Naive Bayes": {},
+    "Random Forest": {'n_estimators': [50, 100, 200], 'max_depth': [None, 10, 20]},
+    "XGBoost": {'n_estimators': [50, 100, 200], 'max_depth': [3, 5], 'learning_rate': [0.1, 0.05]}
+}
+```
+3. For each model, a grid search with a 5-fold cross validation is run on the training data, the best hyperparameters are identified and the best model is stored.
+   ```python
+   for name, model in models.items():
+    grid_search = GridSearchCV(model, param_grids.get(name, {}), cv=5, scoring='accuracy')
+    grid_search.fit(X_train_scaled, y_train)
+```
+   
+    
