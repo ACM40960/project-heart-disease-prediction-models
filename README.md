@@ -240,7 +240,7 @@ indicating superior discriminative performance over other models.
 
 4. **Accuracy and F1 score**
 Accuracy give sthe overall prediction of correct predictions and F1 score is the harmonic mean of precsion and recall and is mostly used for imbalanced data. 
- <div align="center"><img width="700" height="432" alt="image" src="https://github.com/user-attachments/assets/c557eaa0-83ca-45cf-84b8-7d66fd91cdec" /></div>
+ <div align="center"><img width="800" height="432" alt="image" src="https://github.com/user-attachments/assets/c557eaa0-83ca-45cf-84b8-7d66fd91cdec" /></div>
 
 Random Forest again leads in both metrics, showing it balances precision and recall effectively, which is critical for reliable clinical predictions.
 
