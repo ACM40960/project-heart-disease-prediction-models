@@ -56,7 +56,8 @@ The UCI Heart dataset is sourced from Cleveland, Hungary, Switzerland, and VA Lo
   <div align="center"><img width="1084" height="796" alt="02_Correlation_Matrix" src="https://github.com/user-attachments/assets/d37e366b-ba0c-4ea7-8be6-78816326876d" /></div>
   - A strong correlation can be seen between the number of major vessels and age
 - Age Distribution by Heart Disease Status
- <diiv align="center"> <img width="664" height="204" alt="03_Age_Distribution_by_Target" src="https://github.com/user-attachments/assets/d40450ca-08cf-427d-802a-f8cfca56e510" /></div>
+  
+ <diiv align="center"> <img width="664" height="404" alt="03_Age_Distribution_by_Target" src="https://github.com/user-attachments/assets/d40450ca-08cf-427d-802a-f8cfca56e510" /></div>
   - It can be seen that there are more patients between the ages 50 and 60 in this data.
 
 ## Pre Processing Steps 
@@ -98,15 +99,16 @@ The UCI Heart dataset is sourced from Cleveland, Hungary, Switzerland, and VA Lo
 
 - Random Forest Classifier: This method combines individual decision trees that are trained on different random subsets of the training data. The predictions from each of these trees are independent of each other. The final decision is the majority prediction.
 
-- XgBoost Classifier: This stands for Extreme Gradient Boosting. It makes a simple prediction on the training data, calculates the residuals and builds a decision tree. 
+- XgBoost Classifier: An optimized implementation of the gradient boosting framework, short for Extreme Gradient Boosting. It builds a strong predictive model by sequentially adding weak learners (typically decision trees), where each new model is trained to correct the errors of its predecessors.
 
 - Support Vector Machine: This method works by finding a hyperplane that optimizes the separation between classes based on the variables. 
 
 - Naive Base Classifier: This method is used for text based classification. ‘Naive’ is used as it assumes that all features are independent, and Bayes refers to the use of Bayes’ Theorem that uses probability to predict the class of the target variable.
 
 - Autoencoder + DenseNet:
+   A hybrid deep learning architecture combining two components:
   - Autoencoder: It is a neural network used for unsupervised learning to compress data and then reconstruct it. It consists of an encoder (compresses the number of features), latent space(space capturing the essential features) and a decoder (reconstructing the input code back to the orginal).  It is used for dimensionality reduction, noise reduction, feature extraction, and image reconstruction.
-  - DenseNet: It is a convolutional neural network where each layer is connected to every preceding layer directly. 
+  - DenseNet:  A Convolutional Neural Network (CNN) architecture where each layer is connected to every other layer in a feed-forward fashion. This dense connectivity strengthens feature propagation, encourages feature reuse, and mitigates the vanishing gradient problem.
 
 ## Model Training and Individual Evaluation
 The main steps are highlighted below:
@@ -176,7 +178,7 @@ The main steps are highlighted below:
   </figure>
 
   <figure style="display:inline-block; text-align:center; margin:10px;">
-    <img src="https://github.com/user-attachments/assets/da0d1d5a-8220-4057-93a0-deba12704667" width="30%">
+    <img src="https://github.com/user-attachments/assets/48f97f49-adc7-4668-84dd-3eecff38672f" width="30%">
     <figcaption>Autoencoder DenseNet</figcaption>
   </figure>
 </p>
@@ -244,18 +246,38 @@ Accuracy give sthe overall prediction of correct predictions and F1 score is the
 
 Random Forest again leads in both metrics, showing it balances precision and recall effectively, which is critical for reliable clinical predictions.
 
-6. **PR Curves**
+6. **Precision Recall Curves**
 The Precision-Recall curve shows the trade-off between Precision (positive prediction accuracy) and Recall (sensitivity).  
 It is most useful when dealing with imbalanced datasets.
-<div align="center"><img width="776" height="632" alt="image" src="https://github.com/user-attachments/assets/a13ea6ac-d088-41ac-b506-282b2a678217" /></div>
+<div align="center"><img width="676" height="532" alt="image" src="https://github.com/user-attachments/assets/a13ea6ac-d088-41ac-b506-282b2a678217" /></div> //
+Area under the 
+
+
 
 Random Forest model consistently maintains higher precision and recall, reflecting its robustness in predicting heart disease cases.
 
+**Among all the classifiers evaluated, the Random Forest model achieved the best performance across the considered metrics.**
+
+ 
 ## Feature Selection
 Feature importance has been extracted for Random Forest Classifier. 
 <div align="center"><img width="750" height="432" alt="11_Feature_Importance_Random_Forest" src="https://github.com/user-attachments/assets/374fbc2a-e6c8-43bf-9fad-2773a3b77334" /></div>
 
+## State of the Art Model
+Autoencoder + DenseNet was found to be the state of the art model. It is shown to achieve 99.67% accuracy.  
+DenseNet underperformed compared to Random Forest primarily due to the limited dataset size. Training a deep neural architecture such as DenseNet on a small dataset increases the risk of overfitting, causing the model to capture noise rather than meaningful patterns, which ultimately reduces its predictive accuracy
+
+## Furture Scope
+- Larger Datasets: Expanding datasets with diverse patient records. This can help to reduce the bias
+- Hybrid & Ensemble Models: Combining deep learning and machine learning approaches for higher accuracy.
+- Real-world Deployment: Using this as a web tool.
+
 ## References
+
+1. https://www.kaggle.com/code/fahadrehman07/heart-disease-prediction-using-9-models
+2. **Rahman, A. U., Alsenani, Y., Zafar, A., et al. (2024).** *Heart disease prediction using autoencoder and DenseNet architecture.* *Egyptian Informatics Journal*, 28(1), Article 100559. [https://doi.org/10.1016/j.eij.2024.100559](https://doi.org/10.1016/j.eij.2024.100559) :contentReference[oaicite:1]{index=1}
+3.  **Kavitha, M., Gnaneswar, G., Dinesh, R., Rohith Sai, Y., & Sai Suraj, R. (2023).** *Heart disease prediction using hybrid machine learning model.* Department of Computer Science and Engineering, Koneru Lakshmaiah Education Foundation, Vaddeswaram, AP, India.
+4. - **Khan, S. N., Nawi, N. M., Shahzad, A., Ullah, A., Mushtaq, M. F., Mir, J., & Aamir, M. (2017).** *Comparative analysis for heart disease prediction.* *International Journal on Informatics Visualization, 1*(4), 2. e-ISSN: 2549-9904, ISSN: 2549-9610.
 
 
 
