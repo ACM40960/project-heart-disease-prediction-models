@@ -4,13 +4,13 @@
 <div align="center"><img width="650" height="400" alt="image" src="https://github.com/user-attachments/assets/0d4bb3a6-65ec-4018-ac2d-b66cfd6dbfe2" /></div>
 
 ## Overview
-This project aims to focuses on studying different machine learning models to predict heart diseases. A comprehensive evaluation is conducted using a range of performance metrics, including accuracy, precision, recall, area under the receiver operating characteristic curve (AUROC), and area under the precision-recall curve (AUPRC). By analyzing these metrics, the research aims to provide an in-depth comparison of model effectiveness, robustness, and potential clinical applicability in heart disease prediction.
+This project focuses on studying different machine learning models to predict heart diseases. A comprehensive evaluation is conducted using a range of performance metrics, including accuracy, precision, recall, area under the receiver operating characteristic curve (AUROC), and area under the precision-recall curve (AUPRC). By analyzing these metrics, the research aims to provide an in-depth comparison of model effectiveness, robustness, potential clinical applicability in heart disease prediction and find an optimal ML model for predicting heart disease.
 
 ## Objective
 The objectives of this project are:  
 - To preprocess and clean the dataset, ensuring data quality and consistency for accurate analysis.
 - To implement different machine learning models for predictive analysis.
-- To identify the best model and with the best performance metrics.
+- To identify the best model with the best performance metrics.
 
 
 
