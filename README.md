@@ -275,9 +275,9 @@ DenseNet underperformed compared to Random Forest primarily due to the limited d
 ## References
 
 1. https://www.kaggle.com/code/fahadrehman07/heart-disease-prediction-using-9-models
-2. **Rahman, A. U., Alsenani, Y., Zafar, A., et al. (2024).** *Heart disease prediction using autoencoder and DenseNet architecture.* *Egyptian Informatics Journal*, 28(1), Article 100559. [https://doi.org/10.1016/j.eij.2024.100559](https://doi.org/10.1016/j.eij.2024.100559) :contentReference[oaicite:1]{index=1}
-3.  **Kavitha, M., Gnaneswar, G., Dinesh, R., Rohith Sai, Y., & Sai Suraj, R. (2023).** *Heart disease prediction using hybrid machine learning model.* Department of Computer Science and Engineering, Koneru Lakshmaiah Education Foundation, Vaddeswaram, AP, India.
-4. - **Khan, S. N., Nawi, N. M., Shahzad, A., Ullah, A., Mushtaq, M. F., Mir, J., & Aamir, M. (2017).** *Comparative analysis for heart disease prediction.* *International Journal on Informatics Visualization, 1*(4), 2. e-ISSN: 2549-9904, ISSN: 2549-9610.
+2. **Rahman, A. U., Alsenani, Y., Zafar, A., et al. (2024).** *Heart disease prediction using autoencoder and DenseNet architecture.* *Egyptian Informatics Journal*, 28(1), Article 100559.
+3. **Kavitha, M., Gnaneswar, G., Dinesh, R., Rohith Sai, Y., & Sai Suraj, R. (2023).** *Heart disease prediction using hybrid machine learning model.* Department of Computer Science and Engineering, Koneru Lakshmaiah Education Foundation, Vaddeswaram, AP, India.
+4. **Khan, S. N., Nawi, N. M., Shahzad, A., Ullah, A., Mushtaq, M. F., Mir, J., & Aamir, M. (2017).** *Comparative analysis for heart disease prediction.* *International Journal on Informatics Visualization, 1*(4), 2. e-ISSN: 2549-9904, ISSN: 2549-9610.
 
 
 
