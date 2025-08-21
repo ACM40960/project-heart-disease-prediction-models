@@ -220,7 +220,7 @@ Perfomance metrics like accuracy, precision, recall and F1 score can be found fr
 
 2. **Sensitivity vs Specificity**
    High sensitivity is crucial, as it implies fewer false negatives. High specificity is aslo important as it implies fewer false positives
-   <div align="center"><img width="650" height="432" alt="09_Sensitivity_Specificity_Comparison (2)" src="https://github.com/user-attachments/assets/c9116d6c-b4c2-4908-99c5-c7144e007578" /></div>
+   <div align="center"><img width="700" height="432" alt="09_Sensitivity_Specificity_Comparison (2)" src="https://github.com/user-attachments/assets/c9116d6c-b4c2-4908-99c5-c7144e007578" /></div>
    
 
 - Random Forest, SVM, and XGBoost achieved the highest specificity (~0.93) with good sensitivity (~0.85–0.87).  
