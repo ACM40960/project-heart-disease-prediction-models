@@ -253,7 +253,7 @@ Random Forest model consistently maintains higher precision and recall, reflecti
 
 ## Feature Selection
 Feature importance has been extracted for Random Forest Classifier. 
-<div align="center"><img width="576" height="432" alt="11_Feature_Importance_Random_Forest" src="https://github.com/user-attachments/assets/374fbc2a-e6c8-43bf-9fad-2773a3b77334" /></div>
+<div align="center"><img width="650" height="432" alt="11_Feature_Importance_Random_Forest" src="https://github.com/user-attachments/assets/374fbc2a-e6c8-43bf-9fad-2773a3b77334" /></div>
 
 ## References
 
