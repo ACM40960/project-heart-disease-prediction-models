@@ -51,12 +51,12 @@ The UCI Heart dataset is sourced from Cleveland, Hungary, Switzerland, and VA Lo
 
 ## Exploratory Data Analysis
 - The distribution of target variable is given below:
-  <div align="center"><img width="576" height="432" alt="01_Target_Distribution" src="https://github.com/user-attachments/assets/da9874ee-5643-491e-85f6-6f49af4d8301" /></div>
+  <div align="center"><img width="376" height="232" alt="01_Target_Distribution" src="https://github.com/user-attachments/assets/da9874ee-5643-491e-85f6-6f49af4d8301" /></div>
 - Correlation matrix between the variables
-  <div align="center"><img width="1584" height="1296" alt="02_Correlation_Matrix" src="https://github.com/user-attachments/assets/d37e366b-ba0c-4ea7-8be6-78816326876d" /></div>
+  <div align="center"><img width="1084" height="796" alt="02_Correlation_Matrix" src="https://github.com/user-attachments/assets/d37e366b-ba0c-4ea7-8be6-78816326876d" /></div>
   - A strong correlation can be seen between the number of major vessels and age
 - Age Distribution by Heart Disease Status
- <diiv align="center"> <img width="864" height="504" alt="03_Age_Distribution_by_Target" src="https://github.com/user-attachments/assets/d40450ca-08cf-427d-802a-f8cfca56e510" /></div>
+ <diiv align="center"> <img width="664" height="204" alt="03_Age_Distribution_by_Target" src="https://github.com/user-attachments/assets/d40450ca-08cf-427d-802a-f8cfca56e510" /></div>
   - It can be seen that there are more patients between the ages 50 and 60 in this data.
 
 ## Pre Processing Steps 
@@ -240,14 +240,14 @@ indicating superior discriminative performance over other models.
 
 4. **Accuracy and F1 score**
 Accuracy give sthe overall prediction of correct predictions and F1 score is the harmonic mean of precsion and recall and is mostly used for imbalanced data. 
- <div align="center"><img width="800" height="432" alt="image" src="https://github.com/user-attachments/assets/c557eaa0-83ca-45cf-84b8-7d66fd91cdec" /></div>
+ <div align="center"><img width="1000" height="632" alt="image" src="https://github.com/user-attachments/assets/c557eaa0-83ca-45cf-84b8-7d66fd91cdec" /></div>
 
 Random Forest again leads in both metrics, showing it balances precision and recall effectively, which is critical for reliable clinical predictions.
 
 6. **PR Curves**
 The Precision-Recall curve shows the trade-off between Precision (positive prediction accuracy) and Recall (sensitivity).  
 It is most useful when dealing with imbalanced datasets.
-<div align="center"><img width="576" height="432" alt="image" src="https://github.com/user-attachments/assets/a13ea6ac-d088-41ac-b506-282b2a678217" /></div>
+<div align="center"><img width="776" height="632" alt="image" src="https://github.com/user-attachments/assets/a13ea6ac-d088-41ac-b506-282b2a678217" /></div>
 
 Random Forest model consistently maintains higher precision and recall, reflecting its robustness in predicting heart disease cases.
 
