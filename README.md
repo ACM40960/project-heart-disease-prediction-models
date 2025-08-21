@@ -78,7 +78,7 @@ The UCI Heart dataset is sourced from Cleveland, Hungary, Switzerland, and VA Lo
 
 5. **Handle Missing Values with Iterative Imputer**
    
-   <img width="239" height="228" alt="image" src="https://github.com/user-attachments/assets/4b22448b-ba95-48cf-a4e2-0db781af2c81" />
+   <div align="center"><img width="450" height="300" alt="image" src="https://github.com/user-attachments/assets/4b22448b-ba95-48cf-a4e2-0db781af2c81" /></div>
 
    - Used **IterativeImputer** (10 iterations, random state 42).  
    - Each missing value is modeled as a function of the other features.  
