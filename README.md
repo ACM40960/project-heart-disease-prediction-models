@@ -12,7 +12,7 @@ The objectives of this project are:
 - To implement different machine learning models for predictive analysis.
 - To identify the best model and with the best performance metrics.
 
-## Libraries Used
+
 
 
 ## Data
@@ -167,14 +167,99 @@ The main steps are highlighted below:
    The autoencoder is trained to compress and reconstruct the training data. The orginal data is transformed into encoded representations.
 
 ## Results
-1. Confusion Matrix
+1. **Confusion Matrix**
    Confusion matrix gives a detailed breakdown of the model perfomance. The confusion matrix obtained for each of the models is given below.
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/da0d1d5a-8220-4057-93a0-deba12704667" width="30%" />
-  <img src="https://github.com/user-attachments/assets/0f38d7ee-35cb-40c1-bc2a-d89ec5d10d1e" width="30%" />
-  <img src="https://github.com/user-attachments/assets/36f1f315-bcf7-4d54-9534-525ff9043dbc" width="30%" />
+  <figure style="display:inline-block; text-align:center; margin:10px;">
+    <img src="https://github.com/user-attachments/assets/0f38d7ee-35cb-40c1-bc2a-d89ec5d10d1e" width="45%">
+    <figcaption>Logistic Regression</figcaption>
+  </figure>
+
+  <figure style="display:inline-block; text-align:center; margin:10px;">
+    <img src="https://github.com/user-attachments/assets/da0d1d5a-8220-4057-93a0-deba12704667" width="45%">
+    <figcaption>Autoencoder DenseNet</figcaption>
+  </figure>
 </p>
 
+<p align="center">
+  <figure style="display:inline-block; text-align:center; margin:10px;">
+    <img src="https://github.com/user-attachments/assets/36f1f315-bcf7-4d54-9534-525ff9043dbc" width="45%">
+    <figcaption>Naive Bayes</figcaption>
+  </figure>
 
-   
+  <figure style="display:inline-block; text-align:center; margin:10px;">
+    <img src="https://github.com/user-attachments/assets/20b4c4fc-7613-4f55-8f5d-c39b9baa71cd" width="45%">
+    <figcaption>Random Forest</figcaption>
+  </figure>
+</p>
+
+<p align="center">
+  <figure style="display:inline-block; text-align:center; margin:10px;">
+    <img src="https://github.com/user-attachments/assets/56690d63-e84b-4e77-aa06-ce6c46190abe" width="45%">
+    <figcaption>Support Vector Machine</figcaption>
+  </figure>
+
+  <figure style="display:inline-block; text-align:center; margin:10px;">
+    <img src="https://github.com/user-attachments/assets/347ec86b-e487-491d-8114-671d8ded5377" width="45%">
+    <figcaption>XGBoost</figcaption>
+  </figure>
+</p>
+The main focus here is to have a high number of True Positives and True Negatives. In addition, since this is a diagnostic tool, we also need to focus on the false negatives. \\
+It can be seen from the above confusion matrices that Random Forest classifier has the least number of false negatives. \\
+Perfomance metrics like accuracy, precision, recall and F1 score can be found from the confusion matrices. These are as summarized below:\\
+
+
+| Model                   | Accuracy | F1-Score | Sensitivity | Specificity |
+|--------------------------|----------|----------|-------------|-------------|
+| Random Forest            | 0.897    | 0.909    | 0.872       | 0.933       |
+| Support Vector Machine   | 0.886    | 0.899    | 0.853       | 0.933       |
+| XGBoost                  | 0.886    | 0.899    | 0.853       | 0.933       |
+| Logistic Regression      | 0.870    | 0.886    | 0.853       | 0.893       |
+| Autoencoder + DenseNet   | 0.848    | 0.868    | 0.844       | 0.853       |
+| Naive Bayes              | 0.832    | 0.853    | 0.826       | 0.840       |
+
+2. **Sensitivity vs Specificity**
+   High sensitivity is crucial, as it implies fewer false negatives. High specificity is aslo important as it implies fewer false positives
+   <img width="1008" height="576" alt="09_Sensitivity_Specificity_Comparison (2)" src="https://github.com/user-attachments/assets/c9116d6c-b4c2-4908-99c5-c7144e007578" />
+
+- Random Forest, SVM, and XGBoost achieved the highest specificity (~0.93) with good sensitivity (~0.85–0.87).  
+- Logistic Regression is more balanced across both metrics.  
+- Naive Bayes and Autoencoder + DenseNet underperformed.
+  Random Forest achieves the best balance, demonstrating its effectiveness in correctly identifying both patients with
+and without heart disease.
+
+3. **ROC Curve**
+The ROC curve shows the trade-off between True Positive Rate (Sensitivity) and False Positive Rate across thresholds.  It demonstrates the ability of the classifier to distinguish between the classes.
+The AUC (Area Under Curve) summarizes performance — closer to 1.0 means a better classifier.
+<img width="864" height="720" alt="08_Combined_ROC_Curves (1)" src="https://github.com/user-attachments/assets/fdfea033-86e5-42c8-986b-c82ff303c9ca" />
+
+Random Forest has the highest Area Under the Curve (AUC) of 0.961,
+indicating superior discriminative performance over other models.
+
+4. **Accuracy and F1 score**
+Accuracy give sthe overall prediction of correct predictions and F1 score is the harmonic mean of precsion and recall and is mostly used for imbalanced data. 
+ <img width="431" height="149" alt="image" src="https://github.com/user-attachments/assets/c557eaa0-83ca-45cf-84b8-7d66fd91cdec" />
+Random Forest again leads in both metrics, showing it balances precision and recall effectively, which is critical for reliable clinical predictions.
+
+5. **PR Curves**
+The Precision-Recall curve shows the trade-off between Precision (positive prediction accuracy) and Recall (sensitivity).  
+It is most useful when dealing with imbalanced datasets.
+<img width="272" height="232" alt="image" src="https://github.com/user-attachments/assets/a13ea6ac-d088-41ac-b506-282b2a678217" />
+The
+Random Forest model consistently maintains higher precision and recall, reflecting its robustness in predicting heart disease cases.
+
+## Feature Selection
+Feature importance has been extracted for Random Forest Classifier. 
+<img width="864" height="648" alt="11_Feature_Importance_Random_Forest" src="https://github.com/user-attachments/assets/374fbc2a-e6c8-43bf-9fad-2773a3b77334" />
+
+## References
+
+
+
+
+
+
+
+
+
     
