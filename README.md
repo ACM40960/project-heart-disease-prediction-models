@@ -137,7 +137,7 @@ The main steps are highlighted below:
     grid_search.fit(X_train_scaled, y_train)
    ```
 4. Autoencoder + DenseNet block
-   This was the state of the art model. \\
+   This is the state of the art model. \\
    Autoencoder: It compresses into 8 features (bottleneck) and is trained to reconstruct the input. After proper training, the decoder is discarded and the encoder is used to get the new compressed features.
    ```python
    def create_autoencoder():
