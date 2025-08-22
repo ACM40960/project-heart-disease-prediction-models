@@ -123,24 +123,24 @@ The UCI Heart dataset is sourced from Cleveland, Hungary, Switzerland, and VA Lo
 
 ## Machine Learning Models Used
 
-- Logistic Regression: This method models the log odds of an event as a linear combination of the predictor variables. It is used for binary classification problems.
+- <b>Logistic Regression</b>: This method models the log odds of an event as a linear combination of the predictor variables. It is used for binary classification problems.
 
-- Random Forest Classifier: This method combines individual decision trees that are trained on different random subsets of the training data. The predictions from each of these trees are independent of each other. The final decision is the majority prediction.
+- <b>Random Forest Classifier</b>: This method combines individual decision trees that are trained on different random subsets of the training data. The predictions from each of these trees are independent of each other. The final decision is the majority prediction.
 
-- XgBoost Classifier: An optimized implementation of the gradient boosting framework, short for Extreme Gradient Boosting. It builds a strong predictive model by sequentially adding weak learners (typically decision trees), where each new model is trained to correct the errors of its predecessors.
+- <b>XgBoost Classifier</b>: An optimized implementation of the gradient boosting framework, short for Extreme Gradient Boosting. It builds a strong predictive model by sequentially adding weak learners (typically decision trees), where each new model is trained to correct the errors of its predecessors.
 
-- Support Vector Machine: This method works by finding a hyperplane that optimizes the separation between classes based on the variables. 
+- <b>Support Vector Machine</b>: This method works by finding a hyperplane that optimizes the separation between classes based on the variables. 
 
-- Naive Base Classifier: This method is used for text based classification. ‘Naive’ is used as it assumes that all features are independent, and Bayes refers to the use of Bayes’ Theorem that uses probability to predict the class of the target variable.
+- <b>Naive Base Classifier</b>: This method is used for text based classification. ‘Naive’ is used as it assumes that all features are independent, and Bayes refers to the use of Bayes’ Theorem that uses probability to predict the class of the target variable.
 
-- Autoencoder + DenseNet:
+- <b>Autoencoder + DenseNet</b>:
    A hybrid deep learning architecture combining two components:
   - Autoencoder: It is a neural network used for unsupervised learning to compress data and then reconstruct it. It consists of an encoder (compresses the number of features), latent space(space capturing the essential features) and a decoder (reconstructing the input code back to the orginal).  It is used for dimensionality reduction, noise reduction, feature extraction, and image reconstruction.
   - DenseNet:  A Convolutional Neural Network (CNN) architecture where each layer is connected to every other layer in a feed-forward fashion. This dense connectivity strengthens feature propagation, encourages feature reuse, and mitigates the vanishing gradient problem.
 
 ## Model Training and Individual Evaluation
 The main steps are highlighted below:
-1. A dictionary for different classifiers has been made
+1.**A dictionary for different classifiers has been made**
   ```python
   models = {
     "Logistic Regression": LogisticRegression(),
@@ -150,7 +150,7 @@ The main steps are highlighted below:
     "XGBoost": XGBClassifier(random_state=42, use_label_encoder=False, eval_metric='logloss') # XGBoost with common settings to avoid warnings.
    }
   ```
-2. Each model gets a search space of hyperparameters for GridSearchCV. Naive Bayes does not have any tunable parameters here.
+2. **Each model gets a search space of hyperparameters for GridSearchCV. Naive Bayes does not have any tunable parameters here.**
    ```python
    param_grids = {
     "Logistic Regression": {'C': [0.1, 1, 10], 'solver': ['liblinear']},
@@ -160,14 +160,14 @@ The main steps are highlighted below:
     "XGBoost": {'n_estimators': [50, 100, 200], 'max_depth': [3, 5], 'learning_rate': [0.1, 0.05]}
    }
     ```
-3. For each model, a grid search with a 5-fold cross validation is run on the training data, the best hyperparameters are identified and the best model is stored.
+3. **For each model, a grid search with a 5-fold cross validation is run on the training data, the best hyperparameters are identified and the best model is stored.**
    ```python
    for name, model in models.items():
     grid_search = GridSearchCV(model, param_grids.get(name, {}), cv=5, scoring='accuracy')
     grid_search.fit(X_train_scaled, y_train)
    ```
-4. Autoencoder + DenseNet block
-   This is the state of the art model. \\
+4. **Autoencoder + DenseNet block** 
+   **This is the state of the art model.**\\
    Autoencoder: It compresses into 8 features (bottleneck) and is trained to reconstruct the input. After proper training, the decoder is discarded and the encoder is used to get the new compressed features.
    ```python
    def create_autoencoder():
