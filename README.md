@@ -87,7 +87,7 @@ The UCI Heart dataset is sourced from Cleveland, Hungary, Switzerland, and VA Lo
 - Age Distribution by Heart Disease Status
   
  <diiv align="center"> <img width="664" height="404" alt="03_Age_Distribution_by_Target" src="https://github.com/user-attachments/assets/d40450ca-08cf-427d-802a-f8cfca56e510" /></div>
-  <p align = "center">It can be seen that there are more patients between the ages 50 and 60 in this data.</p>
+  <p align = "center"><b></b>It can be seen that there are more patients between the ages 50 and 60 in this data.</b></p>
 
 ## Pre Processing Steps 
 <div align="center"><img width="400" height="500" alt="image" src="https://github.com/user-attachments/assets/bbba66dc-eff9-4d18-af04-ecaad489b178" /></div>
