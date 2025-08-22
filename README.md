@@ -224,8 +224,8 @@ The main steps are highlighted below:
     <img src="https://github.com/user-attachments/assets/56690d63-e84b-4e77-aa06-ce6c46190abe" width="30%">
   </figure>
 
-  <figure style="display:inline-block; text-align:center; margin:10px;">
-    <img src="https://github.com/user-attachments/assets/347ec86b-e487-491d-8114-671d8ded5377" width="30%">
+  <figure style="display:inline-block; text-align:center; margin:20px;">
+    <img src="https://github.com/user-attachments/assets/347ec86b-e487-491d-8114-671d8ded5377" width="40%">
   </figure>
 </p>
 The main focus here is to have a high number of True Positives and True Negatives. In addition, since this is a diagnostic tool, we also need to focus on the false negatives. //
