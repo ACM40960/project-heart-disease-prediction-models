@@ -14,6 +14,35 @@ The objectives of this project are:
 
 
 
+## Libraries used
+
+This project utilizes several Python libraries for data analysis, machine learning, and visualization.
+
+**Core Data Science & Visualization:**
+* **NumPy:** For numerical operations.
+* **Pandas:** For data manipulation and analysis.
+* **Matplotlib:** For creating static, animated, and interactive visualizations.
+* **Seaborn:** For high-level data visualization.
+
+**Machine Learning & Model Evaluation (Scikit-learn):**
+* **Model Selection:** `train_test_split`, `GridSearchCV`, `validation_curve`
+* **Preprocessing:** `StandardScaler`, `IterativeImputer`
+* **Metrics:** `accuracy_score`, `confusion_matrix`, `roc_curve`, `auc`, `f1_score`, etc.
+* **Models:**
+    * `LogisticRegression`
+    * `SVC` (Support Vector Classifier)
+    * `GaussianNB` (Naive Bayes)
+    * `RandomForestClassifier`
+
+**Advanced Machine Learning:**
+* **XGBoost:** `XGBClassifier` for gradient boosting.
+* **TensorFlow / Keras:** For building and training neural networks (`Sequential` model with `Dense`, `Dropout` layers).
+
+**Standard Libraries:**
+* `os`
+* `re` (Regular Expressions)
+* `warnings`
+* `cycler`
 
 ## Data
 The dataset used in this project is the UCI Heart dataset.  
