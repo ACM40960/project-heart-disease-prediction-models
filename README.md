@@ -195,7 +195,7 @@ The main steps are highlighted below:<br>
    ```
 
    The autoencoder is trained to compress and reconstruct the training data. The orginal data is transformed into encoded representations.
-   <div align="center"><img width="500" height="550" alt="image" src="https://github.com/ACM40960/project-heart-disease-prediction-models/blob/main/generated_plots/06_Loss_Curve_Autoencoder_DenseNet.png?raw=true"/></div>
+   <div align="center"><img width="500" height="650" alt="image" src="https://github.com/ACM40960/project-heart-disease-prediction-models/blob/main/generated_plots/06_Loss_Curve_Autoencoder_DenseNet.png?raw=true"/></div>
 * The learning curves go flat after about 25 training rounds (epochs). This shows the model has hit its performance limit and more training won't lead to any further improvement.
 
 ## Results
