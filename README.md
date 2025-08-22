@@ -167,7 +167,7 @@ The main steps are highlighted below:
     grid_search.fit(X_train_scaled, y_train)
    ```
 4. **Autoencoder + DenseNet block** 
-   **This is the state of the art model.**\\
+   **This is the state of the art model.**
    Autoencoder: It compresses into 8 features (bottleneck) and is trained to reconstruct the input. After proper training, the decoder is discarded and the encoder is used to get the new compressed features.
    ```python
    def create_autoencoder():
@@ -195,6 +195,7 @@ The main steps are highlighted below:
    ```
 
    The autoencoder is trained to compress and reconstruct the training data. The orginal data is transformed into encoded representations.
+   <div align="center"><img width="350" height="300" alt="image" src="https://github.com/user-attachments/assets/4b22448b-ba95-48cf-a4e2-0db781af2c81" /></div>
 
 ## Results
 1. **Confusion Matrix:**
