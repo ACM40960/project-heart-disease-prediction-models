@@ -166,8 +166,8 @@ The main steps are highlighted below:<br>
     grid_search = GridSearchCV(model, param_grids.get(name, {}), cv=5, scoring='accuracy')
     grid_search.fit(X_train_scaled, y_train)
    ```
-4. **Autoencoder + DenseNet block** 
-   **This is the state of the art model.**
+4. **Autoencoder + DenseNet block** <br>
+   **This is the state of the art model.**<br>
    Autoencoder: It compresses into 8 features (bottleneck) and is trained to reconstruct the input. After proper training, the decoder is discarded and the encoder is used to get the new compressed features.
    ```python
    def create_autoencoder():
