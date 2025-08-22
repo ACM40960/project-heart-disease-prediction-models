@@ -80,7 +80,7 @@ The UCI Heart dataset is sourced from Cleveland, Hungary, Switzerland, and VA Lo
 
 ## Exploratory Data Analysis
 - The distribution of target variable is given below:
-  <div align="center"><img width="376" height="232" alt="01_Target_Distribution" src="https://github.com/user-attachments/assets/da9874ee-5643-491e-85f6-6f49af4d8301" /></div>
+  <div align="center"><img width="376" height="300" alt="01_Target_Distribution" src="https://github.com/user-attachments/assets/da9874ee-5643-491e-85f6-6f49af4d8301" /></div>
 - Correlation matrix between the variables
   <div align="center"><img width="1084" height="796" alt="02_Correlation_Matrix" src="https://github.com/user-attachments/assets/d37e366b-ba0c-4ea7-8be6-78816326876d" /></div>
   - A strong correlation can be seen between the number of major vessels and age
