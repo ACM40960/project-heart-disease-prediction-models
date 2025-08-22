@@ -289,7 +289,7 @@ DenseNet underperformed compared to Random Forest primarily due to the limited d
 ## Furture Scope
 - Larger Datasets: Expanding datasets with diverse patient records. This can help to reduce the bias
 - Hybrid & Ensemble Models: Combining deep learning and machine learning approaches for higher accuracy.
-- Real-world Deployment: Using this as a web tool.
+- Real-world Deployment: Deploy it as a clinical web tool to help doctors priortize cases and make more informed decisions.
 
 ## References
 
