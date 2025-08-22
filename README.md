@@ -251,8 +251,8 @@ The main steps are highlighted below:
 - Random Forest, SVM, and XGBoost achieved the highest specificity (~0.93) with good sensitivity (~0.85–0.87).  
 - Logistic Regression is more balanced across both metrics.  
 - Naive Bayes and Autoencoder + DenseNet underperformed.
-  Random Forest achieves the best balance, demonstrating its effectiveness in correctly identifying both patients with
-and without heart disease.
+  **Random Forest achieves the best balance, demonstrating its effectiveness in correctly identifying both patients with
+and without heart disease.**
 
 3. **ROC Curve**
 The ROC curve shows the trade-off between True Positive Rate (Sensitivity) and False Positive Rate across thresholds.  It demonstrates the ability of the classifier to distinguish between the classes.
@@ -260,24 +260,20 @@ The AUC (Area Under Curve) summarizes performance — closer to 1.0 means a bett
 <div align="center"><img width="576" height="432" alt="08_Combined_ROC_Curves (1)" src="https://github.com/user-attachments/assets/fdfea033-86e5-42c8-986b-c82ff303c9ca" /></div>
 
 
-Random Forest has the highest Area Under the Curve (AUC) of 0.961,
-indicating superior discriminative performance over other models.
+**Random Forest has the highest Area Under the Curve (AUC) of 0.961,indicating superior discriminative performance over other models.**
 
 4. **Accuracy and F1 score**
 Accuracy give the overall prediction of correct predictions and F1 score is the harmonic mean of precsion and recall and is mostly used for imbalanced data. 
- <div align="center"><img width="1000" height="632" alt="image" src="https://github.com/user-attachments/assets/c557eaa0-83ca-45cf-84b8-7d66fd91cdec" /></div>
+ <div align="center"><img width="1000" height="632" alt="image" src="https://github.com/user-attachments/assets/c557eaa0-83ca-45cf-84b8-7d66fd91cdec"/></div>
 
-Random Forest again leads in both metrics, showing it balances precision and recall effectively, which is critical for reliable clinical predictions.
+**Random Forest again leads in both metrics, showing it balances precision and recall effectively, which is critical for reliable clinical predictions.**
 
 6. **Precision Recall Curves**
 The Precision-Recall curve shows the trade-off between Precision (positive prediction accuracy) and Recall (sensitivity).  
 It is most useful when dealing with imbalanced datasets.
-<div align="center"><img width="676" height="532" alt="image" src="https://github.com/user-attachments/assets/a13ea6ac-d088-41ac-b506-282b2a678217" /></div> //
-Area under the 
+<div align="center"><img width="676" height="532" alt="image" src="https://github.com/user-attachments/assets/a13ea6ac-d088-41ac-b506-282b2a678217" /></div> 
 
-
-
-Random Forest model consistently maintains higher precision and recall, reflecting its robustness in predicting heart disease cases.
+**Random Forest model consistently maintains higher precision and recall, reflecting its robustness in predicting heart disease cases.**
 
 **Among all the classifiers evaluated, the Random Forest model achieved the best performance across the considered metrics.**
 
