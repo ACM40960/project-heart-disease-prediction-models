@@ -18,13 +18,13 @@ The objectives of this project are:
 
 This project utilizes several Python libraries for data analysis, machine learning, and visualization.
 
-**Core Data Science & Visualization:**
+**Core Data Science and Visualization:**
 * **NumPy:** For numerical operations.
 * **Pandas:** For data manipulation and analysis.
 * **Matplotlib:** For creating static, animated, and interactive visualizations.
 * **Seaborn:** For high-level data visualization.
 
-**Machine Learning & Model Evaluation (Scikit-learn):**
+**Machine Learning and Model Evaluation (Scikit-learn):**
 * **Model Selection:** `train_test_split`, `GridSearchCV`, `validation_curve`
 * **Preprocessing:** `StandardScaler`, `IterativeImputer`
 * **Metrics:** `accuracy_score`, `confusion_matrix`, `roc_curve`, `auc`, `f1_score`, etc.
