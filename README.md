@@ -271,7 +271,7 @@ Accuracy give the overall prediction of correct predictions and F1 score is the 
 6. **Precision Recall Curves**
 The Precision-Recall curve shows the trade-off between Precision (positive prediction accuracy) and Recall (sensitivity).  
 It is most useful when dealing with imbalanced datasets.
-<div align="center"><img width="676" height="532" alt="image" src="https://github.com/user-attachments/assets/a13ea6ac-d088-41ac-b506-282b2a678217" /></div> 
+<div align="center"><img width="576" height="432" alt="image" src="https://github.com/user-attachments/assets/a13ea6ac-d088-41ac-b506-282b2a678217" /></div> 
 
 **Random Forest model consistently maintains higher precision and recall, reflecting its robustness in predicting heart disease cases.**
 
