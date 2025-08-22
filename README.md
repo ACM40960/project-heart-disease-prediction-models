@@ -127,7 +127,7 @@ The UCI Heart dataset is sourced from Cleveland, Hungary, Switzerland, and VA Lo
 
 - <b>Random Forest Classifier</b>: This method combines individual decision trees that are trained on different random subsets of the training data. The predictions from each of these trees are independent of each other. The final decision is the majority prediction.
 
-- <b>XgBoost Classifier</b>: An optimized implementation of the gradient boosting framework, short for Extreme Gradient Boosting. It builds a strong predictive model by sequentially adding weak learners (typically decision trees), where each new model is trained to correct the errors of its predecessors.
+- <b>XGBoost Classifier</b>: An optimized implementation of the gradient boosting framework, short for Extreme Gradient Boosting. It builds a strong predictive model by sequentially adding weak learners (typically decision trees), where each new model is trained to correct the errors of its predecessors.
 
 - <b>Support Vector Machine</b>: This method works by finding a hyperplane that optimizes the separation between classes based on the variables. 
 
@@ -229,9 +229,9 @@ The main steps are highlighted below:
   </figure>
 </p>
 
-- The main focus here is to have a high number of True Positives and True Negatives. In addition, since this is a diagnostic tool, we also need to focus on the false negatives. //
-- It can be seen from the above confusion matrices that Random Forest classifier has the least number of false negatives. //
-- Perfomance metrics like accuracy, precision, recall and F1 score can be found from the confusion matrices. These are as summarized below://
+- The main focus here is to have a high number of True Positives and True Negatives. In addition, since this is a diagnostic tool, we also need to focus on the false negatives. 
+- It can be seen from the above confusion matrices that Random Forest classifier has the least number of false negatives. 
+- Perfomance metrics like Accuracy, Sensitivity, Specificity and F1-Score can be found from the confusion matrices. These are as summarized below:
 
 
 | Model                   | Accuracy | F1-Score | Sensitivity | Specificity |
