@@ -200,7 +200,7 @@ The main steps are highlighted below:
 1. **Confusion Matrix**
    Confusion matrix gives a detailed breakdown of the model perfomance. The confusion matrix obtained for each of the models is given below.
 <p align="center">
-  <figure style="display:inline-block; margin:20px;text-align:center;">
+  <figure style="display:inline-block; padding:20px;text-align:center;">
     <img src="https://github.com/user-attachments/assets/0f38d7ee-35cb-40c1-bc2a-d89ec5d10d1e" width="35%">
   </figure>
 
