@@ -139,7 +139,7 @@ The Heart Disease UCI dataset is sourced from Cleveland, Hungary, Switzerland, a
   - DenseNet:  A Convolutional Neural Network (CNN) architecture where each layer is connected to every other layer in a feed-forward fashion. This dense connectivity strengthens feature propagation, encourages feature reuse, and mitigates the vanishing gradient problem.
 
 ## Model Training and Individual Evaluation
-The main steps are highlighted below:
+The main steps are highlighted below://
 1.**A dictionary for different classifiers has been made**
   ```python
   models = {
