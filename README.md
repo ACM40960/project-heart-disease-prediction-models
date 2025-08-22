@@ -288,9 +288,9 @@ Feature importance has been extracted for Random Forest Classifier.
 Autoencoder + DenseNet, which was found to be the state of the art model underperformed compared to Random Forest primarily due to the limited dataset size. Training a deep neural architecture such as DenseNet on a small dataset increases the risk of overfitting, causing the model to capture noise rather than meaningful patterns, which ultimately reduces its predictive accuracy.
 
 ## Furture Scope
-- Larger Datasets: Expanding datasets with diverse patient records. This can help to reduce the bias.
-- Hybrid & Ensemble Models: Combining deep learning and machine learning approaches for higher accuracy.
-- Real-world Deployment: Deploy it as a clinical web tool to help doctors priortize cases and make more informed decisions.
+- **Larger Datasets**: Expanding datasets with diverse patient records. This can help to reduce the bias.
+- **Hybrid & Ensemble Models**: Combining deep learning and machine learning approaches for higher accuracy.
+- **Real-world Deployment**: Deploy it as a clinical web tool to help doctors priortize cases and make more informed decisions.
 
 ## References
 
