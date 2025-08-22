@@ -285,7 +285,7 @@ Feature importance has been extracted for Random Forest Classifier.
 <div align="center"><img width="750" height="432" alt="11_Feature_Importance_Random_Forest" src="https://github.com/user-attachments/assets/374fbc2a-e6c8-43bf-9fad-2773a3b77334" /></div>
 
 ## State of the Art Model
-Autoencoder + DenseNet was found to be the state of the art model. It is shown to achieve 99.67% accuracy.  
+Autoencoder + DenseNet was found to be the state of the art model.<br>
 DenseNet underperformed compared to Random Forest primarily due to the limited dataset size. Training a deep neural architecture such as DenseNet on a small dataset increases the risk of overfitting, causing the model to capture noise rather than meaningful patterns, which ultimately reduces its predictive accuracy
 
 ## Furture Scope
