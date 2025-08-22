@@ -45,9 +45,9 @@ This project utilizes several Python libraries for data analysis, machine learni
 * `cycler`
 
 ## Data
-The dataset used in this project is the HeartDisease UCI Cleveland dataset.  
+The dataset used in this project is the Heart Disease UCI dataset.  
 
-The UCI Heart dataset is sourced from Cleveland, Hungary, Switzerland, and VA Long Beach. It has medical records of around 726 male patients and 194 female patients. The dataset contains 14 attributes.
+The Heart Disease UCI dataset is sourced from Cleveland, Hungary, Switzerland, and VA Long Beach. It has medical records of around 726 male patients and 194 female patients. The dataset contains 14 attributes.
 - age: age in years
 - sex: sex (1= male, 0 = female)
 - cp: chest pain type
