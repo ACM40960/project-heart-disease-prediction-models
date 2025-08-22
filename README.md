@@ -202,36 +202,30 @@ The main steps are highlighted below:
 <p align="center">
   <figure style="display:inline-block; margin:10px;text-align:center;">
     <img src="https://github.com/user-attachments/assets/0f38d7ee-35cb-40c1-bc2a-d89ec5d10d1e" width="30%">
-    <figcaption>Logistic Regression</figcaption>
   </figure>
 
   <figure style="display:inline-block; text-align:center; margin:10px;">
     <img src="https://github.com/user-attachments/assets/48f97f49-adc7-4668-84dd-3eecff38672f" width="30%">
-    <figcaption>Autoencoder DenseNet</figcaption>
   </figure>
 </p>
 
 <p align="center">
   <figure style="display:inline-block; text-align:center; margin:10px;">
     <img src="https://github.com/user-attachments/assets/36f1f315-bcf7-4d54-9534-525ff9043dbc" width="30%">
-    <figcaption>Naive Bayes</figcaption>
   </figure>
 
   <figure style="display:inline-block; text-align:center; margin:10px;">
     <img src="https://github.com/user-attachments/assets/20b4c4fc-7613-4f55-8f5d-c39b9baa71cd" width="30%">
-    <figcaption>Random Forest</figcaption>
   </figure>
 </p>
 
 <p align="center">
   <figure style="display:inline-block; text-align:center; margin:10px;">
     <img src="https://github.com/user-attachments/assets/56690d63-e84b-4e77-aa06-ce6c46190abe" width="30%">
-    <figcaption>Support Vector Machine</figcaption>
   </figure>
 
   <figure style="display:inline-block; text-align:center; margin:10px;">
     <img src="https://github.com/user-attachments/assets/347ec86b-e487-491d-8114-671d8ded5377" width="30%">
-    <figcaption>XGBoost</figcaption>
   </figure>
 </p>
 The main focus here is to have a high number of True Positives and True Negatives. In addition, since this is a diagnostic tool, we also need to focus on the false negatives. //
