@@ -231,7 +231,7 @@ The main steps are highlighted below:<br>
   </figure>
 </p>
 
-- The main focus here is to have a high number of True Positives and True Negatives. In addition, since this is a diagnostic tool, we also need to focus on the false negatives. 
+- The main focus here is to have a high number of True Positives and True Negatives. In addition, since this is a diagnostic tool, we also need to focus on the False Negatives. 
 - It can be seen from the above confusion matrices that Random Forest classifier has the least number of false negatives. 
 - Perfomance metrics like Accuracy, Sensitivity, Specificity and F1-Score can be found from the confusion matrices. These are as summarized below:
 
